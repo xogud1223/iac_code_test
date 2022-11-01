@@ -2,7 +2,11 @@ team: Panthers
 
 manager: Shirleygir
 
+<<<<<<< HEAD
 coach: Shirley
+=======
+coach: Raymond
+>>>>>>> dbdc775 (Edit Panthers)
 
 members:
 - Violet
