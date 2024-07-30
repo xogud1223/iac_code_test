@@ -15,6 +15,9 @@ sudo systemctl enable apache2
 echo "<h1>Deployed via Terraform</h1>" | sudo tee /var/www/html/index.html
 EOF
   
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 resource "aws_ebs_volume" "web_host_storage" {
@@ -23,7 +26,6 @@ resource "aws_ebs_volume" "web_host_storage" {
   #encrypted         = false  # Setting this causes the volume to be recreated on apply 
   size = 1
   
-  encrypted = true
 }
 
 resource "aws_ebs_snapshot" "example_snapshot" {
